@@ -1,0 +1,1 @@
+import{b as p,k as s,j as u,M as i}from"./hoisted.umGVjoe0.js";var m=(n,o)=>n.length>0?()=>n(u(o)):n;function d(n,o){let r=0;const t=n.map((a,c)=>s(()=>(r=c,a()),void 0,i));return s(()=>t.map(a=>a())[r],void 0,o)}function v(n,o,r){let t=()=>o;const[a,c]=p(o),f=s(m(n,()=>t()),o);return[t=d([a,f],r),e=>c(()=>typeof e=="function"?e(u(t)):e)]}export{v as d};

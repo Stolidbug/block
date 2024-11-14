@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated JavaScript Files</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Welcome to the Integrated JavaScript Page</h1>
+<cfc-filters-context>
+    <div class="filters container-max">
+        <h2 class="filters-title">Filters title</h2>
+
+        <div class="filters-wrapper">
+            <p class="filters-label">
+                Choisissez Editeur et Presse pour qu'une liste de 4 liens s'affiche.
+            </p>
+
+            <p class="filters-text-info">
+                <span>Vous êtes</span>
+                <cfc-filters-button
+                        options='["un", "deux"]'
+                        modal-title="Choisir un statut"
+                ></cfc-filters-button>
+
+                <span>de</span>
+                <cfc-filters-button
+                        options='["test", "test2"]'
+                        modal-title="Choisir un domaine"
+                ></cfc-filters-button>
+            </p>
+
+            <div data-buttons />
+
+            <div class="filters-content">
+                <cfc-filters-content when='["un", "test"]'>
+                    Augue nullam amet luctus ut commodo. Dui euismod luctus lorem eros at
+                    blandit. Sapien viverra pharetra tincidunt donec viverra euermentum
+                </cfc-filters-content>
+
+                <cfc-filters-content when='["un", "test2"]'>
+                    un + test2
+                </cfc-filters-content>
+
+                <cfc-filters-content when='["deux", "test"]'>
+                    deux + test
+                </cfc-filters-content>
+
+                <cfc-filters-content when='["deux", "test2"]'>
+                    deux + test2
+                </cfc-filters-content>
+            </div>
+        </div>
+    </div>
+</cfc-filters-context>
+<footer id="footer-quote" class="footer-quote liquid footer-quote-default">
+    <div class="footer-quote-inner">
+        <div class="footer-quote-illust" style="">
+            <div class="footer-quote-illust-icon">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="50"
+                        height="50"
+                        fill="none"
+                        viewBox="0 0 50 50"
+                >
+                    <path
+                            fill="currentColor"
+                            d="M22.7 11c0-.6.4-1 1-1s1 .4 1 1c0 .5-.4 1-1 1a1 1 0 0 1-1-1Zm27 7.9v13.9a9 9 0 0 1-7.8 8.9v7a1 1 0 0 1-1.9.6l-6.7-7.6H18.9a9 9 0 0 1-8.9-9V32H6.6l-4.4 7.5a1 1 0 0 1-.9.5H1a1 1 0 0 1-.9-1V9.2c0-5 4-9 9-9H31c4.9 0 9 4.2 9 9.2v.5h.8c5 0 9 4 9 9Zm-2 0c0-3.8-3-6.9-6.9-6.9H28.5a1 1 0 0 1-1-1c0-.6.4-1 1-1H38v-.6a7 7 0 0 0-6.9-7H9.2c-3.8 0-6.9 3-6.9 6.8v26.1l2.9-4.8c.2-.3.5-.5.9-.5H10V18.9c0-5 4-9 9-9 .5 0 1 .5 1 1 0 .7-.5 1.1-1 1.1a7 7 0 0 0-6.9 6.9v13.9c0 3.8 3 6.9 6.9 6.9h14.8c.3 0 .5 0 .7.3l5.3 6v-5.3c0-.6.5-1 1-1a7 7 0 0 0 6.9-6.9v-14Zm-8.6 1.5H21a1 1 0 0 0-1 1c0 .6.5 1 1 1h18c.5 0 1-.4 1-1 0-.5-.5-1-1-1Zm0 9.5H21a1 1 0 0 0-1 1c0 .6.5 1 1 1h18c.5 0 1-.4 1-1 0-.5-.5-1-1-1Z"
+                    />
+                </svg>
+            </div>
+        </div>
+        <div class="footer-quote-content" style="">
+            <div class="footer-quote-description">
+                <p>
+                    Un mail par semaine avec l’essentiel des informations pour savoir
+                    partager les savoirs.
+                </p>
+            </div>
+            <div class="footer-quote-cta">
+                <solid-button as="a" href="/" variant="ghost">
+                    Bouton CTA
+                    <solid-icon
+                            icon="mingcute-right-small-line"
+                            iconsize="var(--font-size-6)"
+                    ></solid-icon>
+                </solid-button>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer id="footer" class="footer liquid" role="contentinfo">
+    <div class="footer-inner">
+        <div class="footer-inner-start">
+            <a class="footer-logo" href="/">
+                <img
+                        src="/blocks/images/logo.svg"
+                        alt="CFC Centre Français de la Copie"
+                />
+            </a>
+
+            <address class="footer-address">
+                <p
+                        itemprop="address"
+                        itemtype="https://schema.org/PostalAddress"
+                        class="footer-address-text"
+                >
+                    18, rue du 4 septembre
+                    <br />
+                    75002 Paris
+                    <br />
+                    Tel: 01 44 07 47 40
+                </p>
+            </address>
+
+            <div class="footer-cta">
+                <solid-button as="a" href="/" variant="ghost">Bouton CTA</solid-button>
+            </div>
+
+            <hr class="separator" />
+        </div>
+
+        <div class="footer-inner-mid">
+            <div class="footer-list-container has-title">
+                <h3 class="footer-title">Secteurs</h3>
+
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Enseignants & formateurs</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Professionnels & prestataires</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Auteurs et éditeurs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-list-container has-title">
+                <h3 class="footer-title">À propos du CFC</h3>
+
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Nos missions</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Gestion collective</a>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="separator" />
+        </div>
+
+        <div class="footer-inner-end">
+            <ul class="social-list">
+                <li class="social-list-item">
+                    <a class="social-link" href="/">
+                        <span class="sr-only">x</span>
+                        <solid-icon
+                                class="social-icon"
+                                icon="mingcute-social-x-line"
+                                iconsize="var(--spacing-6)"
+                                aria-hidden="true"
+                        />
+                    </a>
+                </li>
+                <li class="social-list-item">
+                    <a class="social-link" href="/">
+                        <span class="sr-only">LinkedIn</span>
+                        <solid-icon
+                                class="social-icon"
+                                icon="mingcute-linkedin-fill"
+                                iconsize="var(--spacing-6)"
+                                aria-hidden="true"
+                        />
+                    </a>
+                </li>
+                <li class="social-list-item">
+                    <a class="social-link" href="/">
+                        <span class="sr-only">Facebook</span>
+                        <solid-icon
+                                class="social-icon"
+                                icon="mingcute-facebook-fill"
+                                iconsize="var(--spacing-6)"
+                                aria-hidden="true"
+                        />
+                    </a>
+                </li>
+                <li class="social-list-item">
+                    <a class="social-link" href="/">
+                        <span class="sr-only">Youtube</span>
+                        <solid-icon
+                                class="social-icon"
+                                icon="mingcute-youtube-fill"
+                                iconsize="var(--spacing-6)"
+                                aria-hidden="true"
+                        />
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer-list-container">
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Actualités</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Ressources</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Nous rejoindre</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-list-container">
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Mentions légales</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Données personnelles</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a class="footer-link" href="/">Crédits</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- Your HTML content goes here -->
+
+<!-- JavaScript Files Integration -->
+<script src="Accordion.js"></script>
+<script src="Alert.js"></script>
+<script src="animation.D0jsgjJT.js"></script>
+<script src="animation.Dlhx-3U0.js"></script>
+<script src="Avatar.js"></script>
+<script src="Badge.js"></script>
+<script src="Badge.BTOpmusT.js"></script>
+<script src="blocks.js"></script>
+<script src="breakpoints.store.js"></script>
+<script src="breakpoints.store--NAidOcb.js"></script>
+<script src="Button.js"></script>
+<script src="Card.js"></script>
+<script src="Card.BG7eGcbh.js"></script>
+<script src="Carousel.js"></script>
+<script src="Checkbox.js"></script>
+<script src="Checkbox.BN2ie6G04.js"></script>
+<script src="CheckboxGroup.js"></script>
+<script src="CheckboxGroup.Bz08s1z.js"></script>
+<script src="checkBox.store-BF4Y6MLs.B1wNZxGN.js"></script>
+<script src="checkBox.store-UetgM6K8.js"></script>
+<script src="client.POFChPt3.js"></script>
+<script src="createChildrenObserver-DrEtg4wT.js"></script>
+<script src="createReactiveFocusTrap-BEt_kQNB.js"></script>
+<script src="environment-context-Ot-z-DDy.js"></script>
+<script src="floating-ui.utils.dom-CT4HbYBq.js"></script>
+<script src="focus-trap.esm-XjrvVDimQ.js"></script>
+<script src="Form.js"></script>
+<script src="hoisted.9-cQ1Ri3.js"></script>
+<script src="hoisted.B0HNjj3S.js"></script>
+<script src="hoisted.BP0eDD2.js"></script>
+<script src="hoisted.BRYoO_qP.js"></script>
+<script src="hoisted.bxjbariH.js"></script>
+<script src="hoisted.BvICEVQS.js"></script>
+<script src="hoisted.C35xNy80.js"></script>
+<script src="hoisted.CB1QcEZ.js"></script>
+<script src="hoisted.ChiIiQNJo.js"></script>
+<script src="hoisted.Cr96BjV7.js"></script>
+<script src="hoisted.CXlL8dgo.js"></script>
+<script src="hoisted.CXnULi83.js"></script>
+<script src="hoisted.CzeDlWNe.js"></script>
+<script src="hoisted.DGITaUNT.js"></script>
+<script src="hoisted.DIUsXlNh.js"></script>
+<script src="hoisted.DjGy-_fO.js"></script>
+<script src="hoisted.DPmFx-vV.js"></script>
+<script src="hoisted.DQmjjQGm.js"></script>
+<script src="hoisted.DtnMVBDc.js"></script>
+<script src="hoisted.DzDeB4Ob.js"></script>
+<script src="hoisted.iH4hX6dK.js"></script>
+<script src="hoisted.JnOLYB4U.js"></script>
+<script src="hoisted.LTdd_FbJ.js"></script>
+<script src="hoisted.N8a5Dwc-.js"></script>
+<script src="hoisted.umGVjoe0.js"></script>
+<script src="Icon.js"></script>
+<script src="index--4ydb0oGj.js"></script>
+<script src="index--BZKcl3Xu.js"></script>
+<script src="index--n_s8VLn.js"></script>
+<script src="index--n_s8VLn.BN5bFT9d.js"></script>
+<script src="index--xJNkUwnF.js"></script>
+<script src="index--D2ZAnnK5.Ddz27_ns.js"></script>
+<script src="index--D6vkt-oB.js"></script>
+<script src="lib.js"></script>
+<script src="lottie-player.esm.CzU6lgmq.js"></script>
+<script src="Menu.js"></script>
+<script src="Modal.js"></script>
+<script src="Navigation.js"></script>
+<script src="NavigationItem.js"></script>
+<script src="Otp.BtchTAE2.js"></script>
+<script src="Otp.js"></script>
+<script src="Panel.js"></script>
+<script src="Popover.js"></script>
+<script src="popover-trigger-B.A19BSZ.js"></script>
+<script src="ProgressBar.js"></script>
+<script src="ProgressBar.BbJLP5pa.js"></script>
+<script src="ProgressStep.js"></script>
+<script src="ProgressStep.CrxFepPZ.js"></script>
+<script src="RadioGroup.js"></script>
+<script src="RadioGroup.BByJg9qx.js"></script>
+<script src="script.js"></script>
+<script src="Search.js"></script>
+<script src="Search.fFtWf5pK.js"></script>
+<script src="Select.js"></script>
+<script src="Select.C3PYJo_F.js"></script>
+<script src="solid.B71tQSd1.js"></script>
+<script src="Switch.js"></script>
+<script src="Table.js"></script>
+<script src="Table.D-AWglG_.js"></script>
+<script src="Tabs.js"></script>
+<script src="Tag.js"></script>
+<script src="Tag.ClxSeu9.js"></script>
+<script src="TextInput.js"></script>
+<script src="TextInput.B2HYQq4u.js"></script>
+<script src="theme.store.js"></script>
+<script src="theme.store-v2--qJ2X.js"></script>
+<script src="Tooltip.js"></script>
+<script src="Transition-DZKvjkBn.js"></script>
+<script src="Upload.js"></script>
+<script src="useSlots-Ccq-HAZO.0F0gLq16.js"></script>
+<script src="useSlots-DRPNJ5b2Q.js"></script>
+<script src="utils-Dyl0jAV8.js"></script>
+
+</body>
+</html>

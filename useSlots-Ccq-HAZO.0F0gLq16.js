@@ -1,0 +1,1 @@
+import{b as o,G as u,E as a}from"./hoisted.umGVjoe0.js";function f(e){const[i,n]=o({});function s(){const t=Array.from(e.children).filter(r=>r.slot!=="");n(Object.fromEntries(t.map(r=>[r.slot,r])))}return u(()=>e,{attributes:!0,subtree:!0,childList:!0,attributeFilter:["slot"]},t=>s()),a(()=>{s()}),e&&s(),{has(t){return i()[t]!==void 0},get(t){return i()[t]}}}export{f};
